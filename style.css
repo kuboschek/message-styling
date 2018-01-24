@@ -1,0 +1,67 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+h1.heading {
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin: 0;
+}
+
+div.message {
+    border-radius: 2em;
+    max-width: 768px;
+    padding: 1em;
+    padding-top: 0.5em;
+    margin-top: 2em;
+    clear: both;
+    box-shadow: 1px 1px 2px black;
+    transition: 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) background-color;
+}
+
+div.message.blue {
+    background-color: hsl(240, 20%, 50%);
+    margin-left: 2em;
+    color: white;
+    float: right;
+    text-align: end;
+}
+
+div.message.blue:hover {
+    background-color: hsl(240, 100%, 50%);
+}
+
+div.message.orange {
+    background-color: hsl(39, 20%, 50%);
+    margin-right: 2em;
+    color: black;
+    float: left;
+}
+
+div.message.orange:hover {
+    background-color: hsl(39, 100%, 50%);
+}
+
+@media(max-width: 768px) {
+    div.message p.long-description {
+        display: none;
+    }
+
+    div.message:hover p.long-description {
+        display: initial;
+    }
+}
+
+#message-container {
+    position: absolute;
+    margin: 0;
+    padding: 2em;
+    width: calc(100% - 4em - 8px);
+    border-left: 4px solid orange;
+    border-right: 4px solid blue;
+}
